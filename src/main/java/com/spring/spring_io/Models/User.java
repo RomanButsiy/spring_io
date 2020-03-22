@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 public class User {
@@ -13,7 +13,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String firstName, lastName, email, password, img, role;
-    private Date cts;
+    private Timestamp cts;
 
     public Long getId() {
         return id;
@@ -71,11 +71,11 @@ public class User {
         this.role = role;
     }
 
-    public Date getCts() {
+    public Timestamp getCts() {
         return cts;
     }
 
-    public void setCts(Date cts) {
+    public void setCts(Timestamp cts) {
         this.cts = cts;
     }
 }

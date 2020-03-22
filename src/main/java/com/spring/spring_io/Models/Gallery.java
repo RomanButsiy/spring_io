@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 public class Gallery {
@@ -14,7 +14,7 @@ public class Gallery {
     private Long id;
     private String title, text, img;
     private int views;
-    private Date cts, mts;
+    private Timestamp cts, mts;
 
     public Long getId() {
         return id;
@@ -56,19 +56,19 @@ public class Gallery {
         this.views = views;
     }
 
-    public Date getCts() {
+    public Timestamp getCts() {
         return cts;
     }
 
-    public void setCts(Date cts) {
+    public void setCts(Timestamp cts) {
         this.cts = cts;
     }
 
-    public Date getMts() {
+    public Timestamp getMts() {
         return mts;
     }
 
-    public void setMts(Date mts) {
+    public void setMts(Timestamp mts) {
         this.mts = mts;
     }
 }

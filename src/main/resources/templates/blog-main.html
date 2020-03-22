@@ -4,7 +4,6 @@
     <body>
         <header th:insert="blocks/header :: navbar"></header>
     <div class="container mt-5">
-        <h1>Тут має бути блог</h1>
         <div th:each="el : ${posts}" class="alert alert-info mt-2">
             <h3 th:text="${el.title}"></h3>
             <p th:text="${el.anons}"></p>

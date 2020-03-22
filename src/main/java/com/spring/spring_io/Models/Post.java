@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 public class Post {
@@ -14,7 +14,16 @@ public class Post {
     private Long id;
     private String title, anons, full_text, img;
     private int views;
-    private Date cts, mts;
+    private Timestamp cts, mts;
+
+    public Post(String title, String anons, String full_text, String img) {
+        this.title = title;
+        this.anons = anons;
+        this.full_text = full_text;
+        this.img = img;
+    }
+
+    public Post() {}
 
     public Long getId() {
         return id;
@@ -64,19 +73,19 @@ public class Post {
         this.views = views;
     }
 
-    public Date getCts() {
+    public Timestamp getCts() {
         return cts;
     }
 
-    public void setCts(Date cts) {
+    public void setCts(Timestamp cts) {
         this.cts = cts;
     }
 
-    public Date getMts() {
+    public Timestamp getMts() {
         return mts;
     }
 
-    public void setMts(Date mts) {
+    public void setMts(Timestamp mts) {
         this.mts = mts;
     }
 }
