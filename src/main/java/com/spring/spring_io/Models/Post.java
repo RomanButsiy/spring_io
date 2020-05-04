@@ -13,14 +13,24 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title, anons, full_text, img;
+    private boolean deleted;
     private int views;
     private Timestamp cts, mts;
 
-    public Post(String title, String anons, String full_text, String img) {
+    public Post(String title, String anons, String full_text, String img, boolean deleted) {
         this.title = title;
         this.anons = anons;
         this.full_text = full_text;
         this.img = img;
+        this.deleted = deleted;
+    }
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
     }
 
     public Post() {}

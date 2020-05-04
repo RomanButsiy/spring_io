@@ -14,7 +14,16 @@ public class Gallery {
     private Long id;
     private String title, text, img;
     private int views;
+    private boolean deleted;
     private Timestamp cts, mts;
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
+    }
 
     public Long getId() {
         return id;
